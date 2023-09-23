@@ -46,6 +46,6 @@ export let endpoints = {
  * Khởi tạo axios lấy đường dẫn để sủ dụng API
  */
 export default axios.create({
-  // baseURL: "https://dangviettoan181101.pythonanywhere.com/", //"http://127.0.0.1:8000/"
-  baseURL: "http://127.0.0.1:8000/",
+  baseURL: "https://dangviettoan181101.pythonanywhere.com/", //"http://127.0.0.1:8000/"
+  // baseURL: "http://127.0.0.1:8000/",
 });
