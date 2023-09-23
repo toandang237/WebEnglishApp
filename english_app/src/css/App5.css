@@ -1,0 +1,97 @@
+.popup-content1 {
+    /* padding: 30px; */
+    color: #787878 !important;
+    background-color: #fcf7f8;
+    border: 1px solid rgba(0, 0, 0, .05);
+    margin: 15px 15px 0 0 !important;
+}
+
+.down-icon {
+    margin-top: 10px !important;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fffff7;
+    min-width: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 110;
+    border-radius: 6px;
+}
+
+.dropdown-content li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-content-click {
+    display: block;
+}
+
+.dropdown {
+    position: absolute;
+    margin-top: 7px;
+    right: auto;
+}
+
+.dropdown-content li:hover {
+    background-color: #ddd;
+}
+
+.dropdown-content li .k-icon {
+    left: 0;
+    font-size: 20px;
+    margin-right: 7px;
+    font-weight: 600;
+}
+
+.CustomsizeIcon {
+    font-size: 20px !important;
+}
+
+.UILinkButton {
+    cursor: pointer !important;
+}
+
+.errorInput {
+    box-shadow: 0 0.125rem 0 0 #d9050e !important;
+}
+
+.eng-errors {
+    border-color: #ff725b;
+    color: #ff725b;
+}
+
+.stop-show {
+    display: none !important;
+}
+
+.loading {
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.loading:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
+
+    background: -webkit-radial-gradient(rgba(20, 20, 20, .8), rgba(0, 0, 0, .8));
+}

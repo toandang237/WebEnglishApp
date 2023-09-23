@@ -1,0 +1,109 @@
+.f1b1x8es {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: var(--gray-200-gray-800);
+    border-bottom: .0625rem solid var(--gray-400-gray-600);
+    color: var(--gray-500);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    max-width: 20rem;
+    padding-left: .5rem;
+    width: 100%
+}
+
+.f1b1x8es>label {
+    border-bottom: none;
+    width: 100%
+}
+
+.f1b1x8es>label>span {
+    color: var(--gray-500)
+}
+
+.p1vmf404 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 2rem
+}
+
+.p1vmf404 .f1b1x8es {
+    grid-column: 2;
+    justify-self: end
+}
+
+.c87nrzn {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-bottom: 3.75rem;
+    padding-top: 2rem
+}
+
+.t1ne2oir {
+    color: var(--gray-600-gray-300);
+    text-align: center
+}
+
+.t1obl4kx.t1ne2oir {
+    font-size: 1.5rem;
+    font-weight: 700;
+    -webkit-letter-spacing: normal;
+    -moz-letter-spacing: normal;
+    -ms-letter-spacing: normal;
+    letter-spacing: normal;
+    line-height: 1.3333333333333333;
+    max-width: 20.375rem
+}
+
+@media (min-width: 38.8125rem) {
+    .t1obl4kx.t1ne2oir {
+        font-size: 1.5rem;
+        -webkit-letter-spacing: normal;
+        -moz-letter-spacing: normal;
+        -ms-letter-spacing: normal;
+        letter-spacing: normal;
+        line-height: 1.3333333333333333
+    }
+}
+
+.s27gyf7.t1ne2oir {
+    font-size: 1rem;
+    font-weight: 400;
+    -webkit-letter-spacing: normal;
+    -moz-letter-spacing: normal;
+    -ms-letter-spacing: normal;
+    letter-spacing: normal;
+    line-height: 1.5;
+    margin-top: .25rem;
+    max-width: 20.375rem
+}
+
+@media (min-width: 38.8125rem) {
+    .s27gyf7.t1ne2oir {
+        font-size: 1rem;
+        -webkit-letter-spacing: normal;
+        -moz-letter-spacing: normal;
+        -ms-letter-spacing: normal;
+        letter-spacing: normal;
+        line-height: 1.5
+    }
+}
+
+.cphr65e {
+    margin-top: 1.5rem
+}
