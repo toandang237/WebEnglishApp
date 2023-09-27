@@ -118,6 +118,7 @@ export default function WordItem(props) {
       order: obj.order,
       image: "",
       lesson: obj.lesson,
+      image_path: "",
     };
     setObj(word);
     if (imageWord.current.value) {
@@ -128,6 +129,7 @@ export default function WordItem(props) {
   function changeImage(e) {
     if (e.target.files && e.target.files.length > 0) {
       const objectUrl = URL.createObjectURL(e.target.files[0]);
+      debugger;
       var word = {
         id: obj.id,
         title: obj.title,
@@ -135,6 +137,7 @@ export default function WordItem(props) {
         order: obj.order,
         image: objectUrl,
         lesson: obj.lesson,
+        image_path: objectUrl,
       };
       setObj(word);
       setIsActive(!isActive);
@@ -264,7 +267,7 @@ export default function WordItem(props) {
                                         className="ZoomableImage-rawImage UploadedImage-image"
                                         height={65}
                                         width={90}
-                                        src={obj.image}
+                                        src={obj.image_path}
                                       />
                                     </div>
                                     <a
@@ -272,7 +275,7 @@ export default function WordItem(props) {
                                       onClick={() =>
                                         props.showImage({
                                           isShow: true,
-                                          image: obj.image,
+                                          image: obj.image_path,
                                         })
                                       }
                                     ></a>

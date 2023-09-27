@@ -73,6 +73,7 @@ export default function LessonDetail() {
         image: "",
         order: words.length + 1,
         lesson: lesson.id,
+        image_path: "",
       });
       setWords(listWords);
       setRef(-1);
@@ -81,7 +82,6 @@ export default function LessonDetail() {
       let listWords = words;
       if (idxDelete != -1) {
         listWords.splice(idxDelete - 1, 1);
-        
       }
       setWords(listWords);
       setRef(-1);
@@ -92,10 +92,7 @@ export default function LessonDetail() {
     setRef(0);
     setIdxDelete(idx);
     try {
-
-    }catch (e) {
-      
-    }
+    } catch (e) {}
   }
 
   function btnAddTermClick() {

@@ -14,7 +14,7 @@ export default function ButtonAvatar() {
   const [show, setShow] = useState(false);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.user);
-  const image = user !== null && user !== undefined ? user.avatar : "";
+  const image = user !== null && user !== undefined ? user.avatar_path : "";
   const items = [
     { action: () => profileHandle(), displayName: "Profile", icon: "k-i-info" },
     { action: () => logoutHandle(), displayName: "Logout", icon: "k-i-logout" },

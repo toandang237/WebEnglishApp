@@ -65,3 +65,7 @@ export function currentDay(current_month) {
       return "Dec";
   }
 }
+
+export function GetDate(day, month, year) {
+  return `${year}-${month}-${day}`;
+}

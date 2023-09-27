@@ -10,8 +10,10 @@ export let endpoints = {
   outh2Info: "/users/oauth2-info/", // API lấy thông tin oauth2
   login: "/o/token/", // API lấy token xác thực -> đăng nhập
   logout: "/users/update-last-login/", // API xử lý đăng xuất và cập nhật thời gian đăng nhập cuối cùng
+  signup: "/users/", // API đăng ký tài khoản
   currentUser: "/users/current-user/", // API lấy user đang đăng nhập
   getProfile: (user_id) => `/users/${user_id}/get-profile/`, // API lấy profile của user
+  checkExists: "/users/check-exists/",
 
   //-----------------
 
@@ -46,6 +48,4 @@ export let endpoints = {
  * Khởi tạo axios lấy đường dẫn để sủ dụng API
  */
 export default axios.create({
-  baseURL: "https://dangviettoan181101.pythonanywhere.com/", //"http://127.0.0.1:8000/"
-  // baseURL: "http://127.0.0.1:8000/",
 });
