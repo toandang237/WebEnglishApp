@@ -2,7 +2,7 @@
   "name": "english_app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://toandang237.github.io/",
+  "homepage": "https://toandang237.github.io/WebEnglishApp/",
   "dependencies": {
     "@progress/kendo-data-query": "^1.6.0",
     "@progress/kendo-drawing": "^1.17.5",
