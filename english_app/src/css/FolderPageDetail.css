@@ -1,0 +1,136 @@
+.cni01z {
+    margin: 1rem 0 0
+}
+
+.nt7usgx {
+    margin-bottom: 1rem
+}
+
+.n1xda5c8 {
+    margin-top: 1rem
+}
+
+.nzqaos6:not(:last-child) {
+    margin-bottom: 1rem
+}
+
+.miqwopc {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: var(--miqwopc-0);
+    -ms-flex: var(--miqwopc-0);
+    flex: var(--miqwopc-0)
+}
+
+.miqwopc span {
+    padding-left: .5rem
+}
+
+.cgkv7j {
+    margin-left: .5rem;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content
+}
+
+.c5nmh0z {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.dgsfd5i {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: .25rem
+}
+
+.dgsfd5i,
+.i14147lf {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.i14147lf {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    margin-top: .5rem
+}
+
+.i1riymhq {
+    -webkit-box-flex: 0.9;
+    -ms-flex-positive: 0.9;
+    -webkit-flex-grow: 0.9;
+    flex-grow: 0.9;
+    overflow: hidden
+}
+
+.s1m1ja62 button:not(:last-child) {
+    margin-bottom: 1rem
+}
+
+.s1m1ja62 button svg[aria-label=facebook] {
+    color: #3b5998
+}
+
+.s1m1ja62 button svg[aria-label=twitter] {
+    color: #1da1f2
+}
+
+.s1m1ja62 button svg[aria-label=remind] {
+    color: #2f75c1
+}
+
+@media (min-width: 64.0625rem) {
+    .s12vkslz.s1m1ja62 {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 1rem
+    }
+
+    .s12vkslz.s1m1ja62 button {
+        margin-bottom: 0
+    }
+}
+
+.FolderPageHeader-info {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.FolderPageHeader-byline {
+    color: var(--gray-600-gray-100)
+}
+
+.FolderPageHeader-userLink {
+    margin-left: .5rem
+}
+
+.k-icon-customize {
+    font-size: 35px !important;
+}

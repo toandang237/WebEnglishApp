@@ -3,19 +3,27 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Apis, { endpoints } from "../../config/Apis";
+import { ExceptCommon } from "../../js/ExceptCommon";
+import cookies from "react-cookies";
 
 export default function DashBoardItem(props) {
   const item = props.item;
   //   const [course, setCourse] = useState();
   const [courseName, setCourseName] = useState("");
   useEffect(() => {
-    let loadCourse = async () => {
-      let res = await Apis.get(endpoints["getCoursesByID"](item.course));
-      if (res !== null) {
-        setCourseName(res.data.title);
-      }
-    };
-    loadCourse();
+    try {
+      let loadCourse = async () => {
+        let res = await Apis.get(endpoints["getCoursesByID"](item.course));
+        if (res !== null) {
+          setCourseName(res.data.title);
+        }
+      };
+      loadCourse();
+    } catch (e) {
+      setCourseName("");
+      var user = cookies.load("current-user");
+      ExceptCommon(e, user.id);
+    }
   }, []);
   return (
     <div className="DashboardListItem">
@@ -28,7 +36,7 @@ export default function DashBoardItem(props) {
                   <div className="PreviewCardByline">
                     <div className="UIDelimiter">
                       <span className="SetPreview-cardBylineTermsCount">
-                        <span>20 terms</span>
+                        <span>{item.words.length} terms</span>
                       </span>
                     </div>
                   </div>

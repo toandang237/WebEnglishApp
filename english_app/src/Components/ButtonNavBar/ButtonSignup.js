@@ -7,12 +7,16 @@ import {
   ShowSignup,
 } from "../../Creators/LoginSignUpCreator";
 import { useDispatch, useSelector } from "react-redux";
-import { IsLoading } from "../../Creators/LoadingCreator";
+import { IsLoading, StopLoading } from "../../Creators/LoadingCreator";
+import { GetDate } from "../../js/ActionDateTime";
+import Apis, { endpoints } from "../../config/Apis";
+import getMessage from "../../js/MessageError";
 
 export default function ButtonSignup() {
   const [visible, setVisible] = React.useState(true);
   const IsShow = useSelector((state) => state.showSignup.show);
   const dispatch = useDispatch();
+  const [check, setCheck] = React.useState(true);
 
   const sDay = [];
   const sMonth = [
@@ -67,11 +71,112 @@ export default function ButtonSignup() {
       dispatch(ShowSignup());
     }
   };
-  const signUp = async () => {
-    dispatch(IsLoading());
-    // var day_of_birth =
-    var form = new FormData();
-    form.append();
+
+  const checkSignUp = async () => {
+    const dayInput = document.getElementById("birth_day");
+    const monthInput = document.getElementById("birth_month");
+    const yearInput = document.getElementById("birth_year");
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password1");
+    const emailInput = document.getElementById("email");
+
+    // check birthday
+
+    if (day === "-1" || month === "-1" || year === "-1") {
+      var legendBirthDay = document.getElementById("legend-birthday");
+      legendBirthDay.innerHTML = "Please enter your birthday";
+      legendBirthDay.parentElement.setAttribute("aria-invalid", true);
+      setCheck(false);
+    }
+
+    if (day === "-1") {
+      dayInput.parentElement.style.borderColor = "#ff725b";
+      dayInput.style.color = "#5b5246";
+    }
+
+    if (month === "-1") {
+      monthInput.parentElement.style.borderColor = "#ff725b";
+      monthInput.style.color = "#5b5246";
+    }
+
+    if (year === "-1") {
+      yearInput.parentElement.style.borderColor = "#ff725b";
+      yearInput.style.color = "#5b5246";
+    }
+
+    // check exists user
+    var res = await Apis.postForm(endpoints["checkExists"], {
+      type_check: 0,
+      email: email,
+    });
+    if (res) {
+      var legendEmail = document.getElementById("legend-email");
+      if (res.data.is_exists) {
+        emailInput.style.borderColor = "#ff725b";
+        legendEmail.innerHTML = getMessage(res.data.msg);
+        legendEmail.style.color = "#ff725b";
+        setCheck(false);
+      } else {
+        emailInput.style.borderColor = "#e5e5e5";
+        legendEmail.innerHTML = "Email";
+        legendEmail.style.color = "#4d4f56";
+      }
+    }
+
+    var res = await Apis.postForm(endpoints["checkExists"], {
+      type_check: 1,
+      username: username,
+    });
+    if (res) {
+      var legendUsername = document.getElementById("legend-username");
+      if (res.data.is_exists) {
+        usernameInput.style.borderColor = "#ff725b";
+        legendUsername.innerHTML = getMessage(res.data.msg);
+        legendUsername.style.color = "#ff725b";
+        setCheck(false);
+      } else {
+        usernameInput.style.borderColor = "#e5e5e5";
+        legendUsername.innerHTML = "Username";
+        legendUsername.style.color = "#4d4f56";
+      }
+    }
+
+    var legendPassword = document.getElementById("legend-password");
+    if (password === "") {
+      legendPassword.innerHTML = getMessage("M0010");
+      legendPassword.style.color = "#ff725b";
+      setCheck(false);
+    } else {
+      legendPassword.innerHTML = "Password";
+      legendPassword.style.color = "#4d4f56";
+    }
+  };
+
+  const signUp = async (e) => {
+    e.preventDefault();
+    checkSignUp();
+    if (check) {
+      var form = new FormData();
+      form.append("username", username);
+      form.append("password", password);
+      form.append("email", email);
+      form.append("day_of_birth", GetDate(day, month, year));
+      let res = await Apis.postForm(endpoints["signup"], form, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      if (res) {
+        dispatch(StopLoading());
+        setCheck(true);
+        if (window.confirm(getMessage("M0011"))) {
+          dispatch(HiddenSignup());
+          dispatch(ShowLogin());
+        }
+      } else {
+        dispatch(IsLoading());
+      }
+    }
   };
   return (
     <div className="RightNavigationItem">
@@ -188,14 +293,19 @@ export default function ButtonSignup() {
                     <hr className="UIDivider-separatorLine" />
                   </div>
                 </div>
-                <form className="fuq5sud ">
+                <form className="fuq5sud " onSubmit={signUp}>
                   <div
                     className="b19yogmb"
                     style={{ "--b19yogmb-0": "1.5rem" }}
                   >
                     <div className="UIDiv BirthDateDropdownGroup">
                       <div className="UIFieldset notranslate UIFieldset--turnLegendIntoLabel">
-                        <legend className="UIFieldset-legend">Birthday</legend>
+                        <legend
+                          className="UIFieldset-legend"
+                          id="legend-birthday"
+                        >
+                          Birthday
+                        </legend>
                         <div className="UIFieldset-fields">
                           <div className="UIDropdown UIDropdown--boxed">
                             <select
@@ -204,6 +314,7 @@ export default function ButtonSignup() {
                               name="birth_day"
                               value={day}
                               onChange={(e) => setDay(e.target.value)}
+                              id="birth_day"
                             >
                               <option value="-1">Day</option>
                               {sDay.map((e, idx) => {
@@ -221,6 +332,7 @@ export default function ButtonSignup() {
                               aria-label="birth_month"
                               className="UIDropdown-select"
                               name="birth_month"
+                              id="birth_month"
                               value={month}
                               onChange={(e) => setMonth(e.target.value)}
                             >
@@ -240,6 +352,7 @@ export default function ButtonSignup() {
                               aria-label="birth_year"
                               className="UIDropdown-select"
                               name="birth_year"
+                              id="birth_year"
                               value={year}
                               onChange={(e) => setyear(e.target.value)}
                             >
@@ -260,7 +373,12 @@ export default function ButtonSignup() {
                   </div>
                   <div className="UIDiv">
                     <label className="UIInput UIInput--boxed" htmlFor="email">
-                      <span className="UIInput-label notranslate">Email</span>
+                      <span
+                        className="UIInput-label notranslate"
+                        id="legend-email"
+                      >
+                        Email
+                      </span>
                       <div className="UIInput-content">
                         <input
                           id="email"
@@ -270,7 +388,10 @@ export default function ButtonSignup() {
                           className="UIInput-input"
                           type="email"
                           value={email}
-                          onChange={(e) => setEmail(e.target.value)}
+                          onChange={(e) => {
+                            setEmail(e.target.value);
+                            console.log(e.target.value);
+                          }}
                         />
                         <span className="UIInput-border"></span>
                       </div>
@@ -282,7 +403,10 @@ export default function ButtonSignup() {
                         className="UIInput UIInput--boxed"
                         htmlFor="username"
                       >
-                        <span className="UIInput-label notranslate">
+                        <span
+                          className="UIInput-label notranslate"
+                          id="legend-username"
+                        >
                           Username
                         </span>
                         <div className="UIInput-content">
@@ -306,7 +430,10 @@ export default function ButtonSignup() {
                       className="UIInput UIInput--boxed"
                       htmlFor="password1"
                     >
-                      <span className="UIInput-label notranslate">
+                      <span
+                        className="UIInput-label notranslate"
+                        id="legend-password"
+                      >
                         Password
                       </span>
                       <div className="UIInput-content">

@@ -8,6 +8,10 @@ var listMessage = {
   M0005: "Not found!",
   M0006: "Your data has been saved.",
   M0007: "Oops! Something went wrong ...",
+  M0008: "This email already exists!",
+  M0009: "This username already exists!",
+  M0010: "This field must not be empty! ",
+  M0011: "Registration successful, redirecting to login page",
 };
 
 var listTitle = {

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import AchivementTab from "../Components/TabsProfile/AchivementsTab/AchivementTab";
 import SetsTab from "../Components/TabsProfile/SetsTab/SetsTab";
+import FoldersTab from "../Components/TabsProfile/FoldersTab/FoldersTab";
 
 export default function Profile() {
   const user = useSelector((state) => state.user.user);
@@ -16,7 +17,7 @@ export default function Profile() {
       component: <AchivementTab />,
     },
     { tab: "SETS", index: 1, name: "Study sets", component: <SetsTab /> },
-    { tab: "FOLDERS", index: 2, name: "Folders", component: "" },
+    { tab: "FOLDERS", index: 2, name: "Folders", component: <FoldersTab /> },
     { tab: "CLASSES", index: 3, name: "Classes", component: "" },
   ];
   const [active, setActive] = useState(tabs[0].index);

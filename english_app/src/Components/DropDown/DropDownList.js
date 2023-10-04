@@ -1,15 +1,17 @@
 /** @format */
 
+import { useState } from "react";
 import DropDownItem from "./DropDownItem";
 
 /**
  * items: list items display on dropdown
  *
  */
-export default function DropDownCustom(props) {
+export default function DropDownList(props) {
+  const [selectedIndex, setSelectedIndex] = useState(0);
   return (
     <div
-      className="dropdown dropdownCustom"
+      className="dropdown DropDownList"
       style={{ marginLeft: props.marginLeft }}
     >
       <ul
@@ -21,19 +23,14 @@ export default function DropDownCustom(props) {
           return (
             <DropDownItem
               key={idx}
+              idx={idx}
               action={e.action}
               displayName={e.displayName}
               icon={e.icon}
+              setSelectedIndex={setSelectedIndex}
             />
           );
         })}
-
-        {/* <li onClick={profileHandle}>
-          <span className="k-icon k-i-info"></span>Profile
-        </li>
-        <li onClick={logoutHandle}>
-          <span className="k-icon k-i-logout"></span>Logout
-        </li> */}
       </ul>
     </div>
   );

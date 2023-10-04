@@ -8,7 +8,12 @@ import { LoadingReducer } from "./LoadingReducer";
 import { LoadingCarlendarReducer } from "./LoadingCarlendarReducer";
 import { DialogMessageReducer } from "./DialogMessageReducer";
 import { SetIndexReducer } from "./SetIndexReducer";
-import { CheckSave, WordCount } from "./CommonProducer";
+import {
+  CheckSave,
+  WordCount,
+  onOffNewFolder,
+  onOffNewSet,
+} from "./CommonProducer";
 import { DialogConfirmReducer } from "./DialogConfirmReducer";
 const rootReducer = combineReducers({
   user: UserReducer,
@@ -21,6 +26,8 @@ const rootReducer = combineReducers({
   checkSaveLesson: CheckSave,
   countWord: WordCount,
   dialogConfirm: DialogConfirmReducer,
+  isTurnOnNewSet: onOffNewSet,
+  isTurnOnNewFolder: onOffNewFolder,
 });
 
 export default rootReducer;

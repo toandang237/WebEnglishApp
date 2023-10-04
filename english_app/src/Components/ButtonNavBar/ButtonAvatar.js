@@ -7,17 +7,22 @@ import { UserLogout } from "../../Creators/UserCreator";
 import Apis, { endpoints } from "../../config/Apis";
 import cookies from "react-cookies";
 import { useNavigate } from "react-router-dom";
-import DropDownCustom from "../DropDown/DropDownCustom";
+import DropDownList from "../DropDown/DropDownList";
 export default function ButtonAvatar() {
   const navigate = useNavigate();
   const anchor = useRef(null);
   const [show, setShow] = useState(false);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.user);
-  const image = user !== null && user !== undefined ? user.avatar : "";
+  const image = user !== null && user !== undefined ? user.avatar_path : "";
   const items = [
     { action: () => profileHandle(), displayName: "Profile", icon: "k-i-info" },
     { action: () => logoutHandle(), displayName: "Logout", icon: "k-i-logout" },
+    {
+      action: () => logoutHandle(),
+      displayName: "Settings",
+      icon: "k-i-settings",
+    },
   ];
 
   const onClick = () => {
@@ -59,7 +64,7 @@ export default function ButtonAvatar() {
             }}
           />
           {show ? (
-            <DropDownCustom show={show} items={items} marginLeft="-150px" />
+            <DropDownList show={show} items={items} marginLeft="-150px" />
           ) : (
             ""
           )}

@@ -73,6 +73,8 @@ export default function LessonDetail() {
         image: "",
         order: words.length + 1,
         lesson: lesson.id,
+        image_path: "",
+        words: [],
       });
       setWords(listWords);
       setRef(-1);
@@ -81,7 +83,6 @@ export default function LessonDetail() {
       let listWords = words;
       if (idxDelete != -1) {
         listWords.splice(idxDelete - 1, 1);
-        
       }
       setWords(listWords);
       setRef(-1);
@@ -92,10 +93,7 @@ export default function LessonDetail() {
     setRef(0);
     setIdxDelete(idx);
     try {
-
-    }catch (e) {
-      
-    }
+    } catch (e) {}
   }
 
   function btnAddTermClick() {
@@ -209,7 +207,11 @@ export default function LessonDetail() {
         var content = getMessage("M0002");
         dispatch(TurnOnDialog(title, content));
       } else {
-        dispatch(SaveLesson());
+        if (words.length > 0) {
+          dispatch(SaveLesson());
+        } else {
+          dispatch(StopLoading());
+        }
       }
     }
   }
@@ -258,8 +260,9 @@ export default function LessonDetail() {
                       <button
                         type="button"
                         className="AssemblyButtonBase AssemblyPrimaryButton--default AssemblyButtonBase--medium AssemblyButtonBase--padding"
+                        onClick={Save}
                       >
-                        <span>Create</span>
+                        <span>Done</span>
                       </button>
                     </div>
                   </div>
@@ -351,7 +354,6 @@ export default function LessonDetail() {
                       <button
                         className="AssemblyButtonBase AssemblyIconButton AssemblyIconButton--secondary AssemblyIconButton--circle AssemblyButtonBase--medium AssemblyButtonBase--circle"
                         title="Save"
-                        onClick={Save}
                       >
                         <span className="k-icon k-i-save AssemblyIcon AssemblyIcon--medium CustomsizeIcon"></span>
                       </button>

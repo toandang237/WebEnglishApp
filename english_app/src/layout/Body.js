@@ -11,6 +11,7 @@ import HomePage from "./HomePage";
 import Profile from "./Profile";
 import DialogMessage from "../Components/Dialog/DialogMessage";
 import LessonDetail from "./LessonDetail";
+import FolderDetail from "./FolderDetail";
 
 export default function Body() {
   const user = useSelector((state) => state.user.user);
@@ -65,6 +66,7 @@ export default function Body() {
               path="/:lesson_id/lesson-detail"
               element={<LessonDetail />}
             />
+            <Route path="/folders/:course_id/sets" element={<FolderDetail />} />
           </Routes>
         ) : (
           <Routes>
