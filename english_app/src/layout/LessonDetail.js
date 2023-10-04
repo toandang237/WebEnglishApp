@@ -73,7 +73,6 @@ export default function LessonDetail() {
         image: "",
         order: words.length + 1,
         lesson: lesson.id,
-        image_path: "",
         words: [],
       });
       setWords(listWords);

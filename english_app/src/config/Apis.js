@@ -53,4 +53,5 @@ export let endpoints = {
  * Khởi tạo axios lấy đường dẫn để sủ dụng API
  */
 export default axios.create({
+  baseURL: "https://dangviettoan181101.pythonanywhere.com/",
 });
