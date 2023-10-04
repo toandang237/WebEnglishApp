@@ -1,6 +1,6 @@
 /** @format */
 export function ExceptCommon(e, id) {
-  if (e.response.status !== undefined && e.response.status === 401) {
+  if (e.response !== undefined && e.response.status === 401) {
     deleteCookie("access-token", id);
     deleteCookie("current-user", id);
     deleteCookie("profile", id);

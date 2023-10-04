@@ -25,14 +25,19 @@ export let endpoints = {
   //-----------------
 
   // Khóa học - Course
-  getAllLessonOfUser: "/lessons/get-all-my-lesson-created/", // API lấy danh sách các bài học đã được tạo của user
   getCoursesByID: (course_id) => `/courses/${course_id}/`, // API lấy khóa học
+  getAllCoursesOfUser: "/courses/get-all-my-courses-created/", // API lấy danh sách các khóa học đã tạo của user
+  getCoursesJoined: "/users/get-courses-joined/", // API lấy các khóa học đã tham gia
+  createCourse: "/courses/", // API tạo mới khóa học
 
   //-----------------
 
   // Bài học - Lesson
+  getAllLessonOfUser: "/lessons/get-all-my-lesson-created/", // API lấy danh sách các bài học đã được tạo của user
   getLesson: (lesson_id) => `/lessons/${lesson_id}/`, // API lấy bài học
   updateLesson: (lesson_id) => `/lessons/${lesson_id}/`, // Cập nhật master lesson
+  getLessonsJoined: "/users/get-lessons-joined/", // Lấy danh sách khóa học đã tham gia
+  createLesson: "/lessons/",
 
   //-----------------
 

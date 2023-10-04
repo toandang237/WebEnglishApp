@@ -53,3 +53,31 @@ export function WordIndexDefaul() {
     value: 0,
   };
 }
+
+/** Bật tắt dialog create set */
+
+export function TurnOnNewSet() {
+  return {
+    type: "TURN_ON_NEW_SET",
+  };
+}
+
+export function TurnOffNewSet() {
+  return {
+    type: "TURN_OFF_NEW_SET",
+  };
+}
+
+/** Bật tắt dialog create folder */
+
+export function TurnOnNewFolder() {
+  return {
+    type: "TURN_ON_NEW_FOLDER",
+  };
+}
+
+export function TurnOffNewFolder() {
+  return {
+    type: "TURN_OFF_NEW_FOLDER",
+  };
+}

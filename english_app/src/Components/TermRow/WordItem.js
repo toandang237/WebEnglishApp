@@ -119,6 +119,7 @@ export default function WordItem(props) {
       image: "",
       lesson: obj.lesson,
       image_path: "",
+      words: [],
     };
     setObj(word);
     if (imageWord.current.value) {

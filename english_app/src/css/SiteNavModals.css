@@ -1,0 +1,285 @@
+.AssemblyNotice {
+    border: .0625rem solid;
+    border-radius: var(--radius-medium);
+    color: #2e3856;
+    font-size: .875rem;
+    font-weight: 400;
+    -webkit-letter-spacing: normal;
+    -moz-letter-spacing: normal;
+    -ms-letter-spacing: normal;
+    letter-spacing: normal;
+    line-height: 1.4285714285714286;
+    padding: 1.5rem
+}
+
+@media (min-width: 38.8125rem) {
+    .AssemblyNotice {
+        font-size: .875rem;
+        -webkit-letter-spacing: normal;
+        -moz-letter-spacing: normal;
+        -ms-letter-spacing: normal;
+        letter-spacing: normal;
+        line-height: 1.4285714285714286
+    }
+}
+
+.AssemblyNotice-error {
+    background-color: #fff6ef;
+    border-color: var(--error-red)
+}
+
+.AssemblyNotice-info {
+    background-color: var(--gray-200-gray-700);
+    border: none;
+    color: var(--gray-600-gray-400)
+}
+
+.asc1vt2 {
+    position: relative
+}
+
+.a161zioz,
+.asc1vt2 {
+    height: 100%;
+    width: 100%
+}
+
+.a161zioz {
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+    background: #0000;
+    border: none;
+    color: inherit;
+    cursor: inherit;
+    display: block;
+    font: inherit;
+    line-height: inherit;
+    outline: none;
+    overflow: hidden;
+    resize: none;
+    text-shadow: inherit;
+    white-space: pre-wrap
+}
+
+.a1fcz3cu {
+    background-color: var(--a1fcz3cu-0);
+    border-radius: .5rem;
+    bottom: 0;
+    left: 0;
+    padding: .5rem 1rem 1rem;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.ah6785x {
+    color: var(--ah6785x-1);
+    font-size: .75rem;
+    font-weight: 600;
+    -webkit-letter-spacing: normal;
+    -moz-letter-spacing: normal;
+    -ms-letter-spacing: normal;
+    letter-spacing: normal;
+    line-height: 1.3333333333333333
+}
+
+@media (min-width: 38.8125rem) {
+    .ah6785x {
+        font-size: .75rem;
+        -webkit-letter-spacing: normal;
+        -moz-letter-spacing: normal;
+        -ms-letter-spacing: normal;
+        letter-spacing: normal;
+        line-height: 1.3333333333333333
+    }
+}
+
+.a1fcz3cu:focus-within>.ah6785x {
+    color: var(--ah6785x-3)
+}
+
+.a17bzrsx {
+    word-wrap: break-word;
+    -webkit-font-smoothing: antialiased;
+    max-height: var(--a17bzrsx-1);
+    min-height: var(--a17bzrsx-0);
+    padding: 1.25rem 0;
+    visibility: hidden;
+    white-space: pre-wrap
+}
+
+.bxtl8jy {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--gray-200-gray-800);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--gray-900-gray-200);
+    cursor: text;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    font: inherit;
+    outline: none;
+    overflow: hidden
+}
+
+.bxtl8jy[aria-disabled=true],
+.bxtl8jy[disabled] {
+    cursor: default
+}
+
+.sd7k3b5 {
+    overflow-y: auto
+}
+
+.as2ws6i {
+    height: calc(100% - .5rem);
+    padding: .25rem 1.5rem 1.25rem 0;
+    resize: none;
+    width: 100%
+}
+
+.t1k2umqi {
+    background-color: var(--gray-100-gray-700)
+}
+
+.al0f14n {
+    -webkit-box-align: flex-start;
+    -ms-flex-align: flex-start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    background-color: var(--gray-200-gray-800);
+    border-radius: .5rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    height: 100%;
+    width: 100%
+}
+
+.al0f14n textarea::-webkit-input-placeholder {
+    color: var(--gray-600-gray-200)
+}
+
+.al0f14n textarea::-moz-placeholder {
+    color: var(--gray-600-gray-200)
+}
+
+.al0f14n textarea:-ms-input-placeholder {
+    color: var(--gray-600-gray-200)
+}
+
+.al0f14n textarea::placeholder {
+    color: var(--gray-600-gray-200)
+}
+
+.al0f14n:focus-within {
+    border-bottom: .125rem solid var(--twilight-500-twilight-400)
+}
+
+.t1205mkx {
+    -webkit-font-smoothing: antialiased;
+    border-radius: .5rem;
+    cursor: text;
+    font-size: .875rem;
+    font-weight: 600;
+    -webkit-letter-spacing: normal;
+    -moz-letter-spacing: normal;
+    -ms-letter-spacing: normal;
+    letter-spacing: normal;
+    line-height: 1.4285714285714286;
+    padding: var(--t1205mkx-1);
+    width: 100%
+}
+
+@media (min-width: 38.8125rem) {
+    .t1205mkx {
+        font-size: .875rem;
+        -webkit-letter-spacing: normal;
+        -moz-letter-spacing: normal;
+        -ms-letter-spacing: normal;
+        letter-spacing: normal;
+        line-height: 1.4285714285714286
+    }
+}
+
+.l16bbkbz {
+    cursor: text;
+    font-size: .875rem;
+    font-weight: 600;
+    -webkit-letter-spacing: normal;
+    -moz-letter-spacing: normal;
+    -ms-letter-spacing: normal;
+    letter-spacing: normal;
+    line-height: 1.4285714285714286;
+    width: 100%
+}
+
+@media (min-width: 38.8125rem) {
+    .l16bbkbz {
+        font-size: .875rem;
+        -webkit-letter-spacing: normal;
+        -moz-letter-spacing: normal;
+        -ms-letter-spacing: normal;
+        letter-spacing: normal;
+        line-height: 1.4285714285714286
+    }
+}
+
+.l16bbkbz[aria-disabled=true] {
+    cursor: default
+}
+
+.l1kgauu {
+    color: #939bb4;
+    font-size: .75rem;
+    font-weight: 600;
+    -webkit-letter-spacing: normal;
+    -moz-letter-spacing: normal;
+    -ms-letter-spacing: normal;
+    letter-spacing: normal;
+    line-height: 1.3333333333333333;
+    padding: .25rem 1rem
+}
+
+@media (min-width: 38.8125rem) {
+    .l1kgauu {
+        font-size: .75rem;
+        -webkit-letter-spacing: normal;
+        -moz-letter-spacing: normal;
+        -ms-letter-spacing: normal;
+        letter-spacing: normal;
+        line-height: 1.3333333333333333
+    }
+}
+
+.al0f14n:focus-within>.l1kgauu {
+    color: var(--twilight-500-twilight-400)
+}
+
+.cni01z {
+    margin: 1rem 0 0
+}
+
+.nt7usgx {
+    margin-bottom: 1rem
+}
+
+.n1xda5c8 {
+    margin-top: 1rem
+}
+
+.nzqaos6:not(:last-child) {
+    margin-bottom: 1rem
+}
+
+label + div.DropDownList {
+    width: 100%;
+}
