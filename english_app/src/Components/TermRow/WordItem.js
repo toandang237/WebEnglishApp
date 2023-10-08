@@ -118,7 +118,6 @@ export default function WordItem(props) {
       order: obj.order,
       image: "",
       lesson: obj.lesson,
-      image_path: "",
       words: [],
     };
     setObj(word);
@@ -138,7 +137,6 @@ export default function WordItem(props) {
         order: obj.order,
         image: objectUrl,
         lesson: obj.lesson,
-        image_path: objectUrl,
       };
       setObj(word);
       setIsActive(!isActive);
@@ -268,7 +266,7 @@ export default function WordItem(props) {
                                         className="ZoomableImage-rawImage UploadedImage-image"
                                         height={65}
                                         width={90}
-                                        src={obj.image_path}
+                                        src={obj.image}
                                       />
                                     </div>
                                     <a
@@ -276,7 +274,7 @@ export default function WordItem(props) {
                                       onClick={() =>
                                         props.showImage({
                                           isShow: true,
-                                          image: obj.image_path,
+                                          image: obj.image,
                                         })
                                       }
                                     ></a>
