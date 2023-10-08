@@ -75,6 +75,7 @@ export default function LessonDetail() {
         order: words.length + 1,
         lesson: lesson.id,
         words: [],
+        image_path: "",
       });
       setWords(listWords);
       setRef(-1);

@@ -1,10 +1,19 @@
 /** @format */
 
+import { useNavigate } from "react-router";
+
 export default function SetItem(props) {
+  const navigate = useNavigate();
   const set = props.set;
+  const MoveToLessonDetail_onClick = () => {
+    navigate(`/${set.id}/lesson-detail/`);
+  };
   return (
     <div className="UISetCard">
-      <div className="UIDiv UIBaseCard UIBaseCard--noLinkBox">
+      <div
+        className="UIDiv UIBaseCard UIBaseCard--noLinkBox"
+        onClick={MoveToLessonDetail_onClick}
+      >
         <div className="UIDiv UIBaseCard-inner">
           <div className="UIBaseCard-header">
             <div className="UIBaseCardHeader">
