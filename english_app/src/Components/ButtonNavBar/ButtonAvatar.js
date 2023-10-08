@@ -44,7 +44,7 @@ export default function ButtonAvatar() {
     }
   };
   const profileHandle = () => {
-    navigate("/profile");
+    navigate(`/profile/${user.username}/${user.id}/`);
   };
   return (
     <div

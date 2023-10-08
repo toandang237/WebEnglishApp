@@ -196,31 +196,31 @@
 }
 
 .DashboardHeader.DashboardHeader--hasTabs {
-    padding-bottom: 0
+    padding-bottom: 0;
 }
 
 .DashboardLayout .DashboardHeader {
     margin-left: calc(-50vw - -40.625em);
-    padding-left: calc(50vw - 40.625em)
+    padding-left: calc(50vw - 40.625em);
 }
 
 @media screen and (max-width: 81.25em) {
     .DashboardLayout .DashboardHeader {
         margin-left: 0;
-        padding-left: 0
+        padding-left: 0;
     }
 }
 
 .is-verified .DashboardHeader {
     background-color: var(--twilight-600-gray-900);
     margin-right: calc(-50vw - -41.1875em);
-    padding-right: calc(50vw - 41.1875em)
+    padding-right: calc(50vw - 41.1875em);
 }
 
 @media screen and (max-width: 81.25em) {
     .is-verified .DashboardHeader {
         margin-right: 0;
-        padding-right: 0
+        padding-right: 0;
     }
 }
 
@@ -234,20 +234,20 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 80rem;
-    padding-right: unset
+    padding-right: unset;
 }
 
 .DashboardLayout #DashboardPageTarget>div:not(.PremiumFolderPage) .DashboardHeader {
-    padding-left: unset
+    padding-left: unset;
 }
 
 .DashboardHeader .ProgressDashboardHeader {
     bottom: 0;
-    position: absolute
+    position: absolute;
 }
 
 .DashboardLayout {
-    background-color: var(--gray-200-twilight-900)
+    background-color: var(--gray-200-twilight-900);
 }
 
 .DashboardLayout-container {
@@ -259,16 +259,16 @@
     max-width: 81.25em;
     max-width: unset;
     table-layout: fixed;
-    width: 100%
+    width: 100%;
 }
 
 .DashboardLayout-container.has-sidebar-adz {
-    position: relative
+    position: relative;
 }
 
 @media screen and (max-width: 38.75em) {
     .DashboardLayout-container {
-        height: calc(100vh - 3.125rem)
+        height: calc(100vh - 3.125rem);
     }
 }
 
@@ -278,27 +278,27 @@
     display: table-cell;
     position: relative;
     width: 17rem;
-    z-index: 200
+    z-index: 200;
 }
 
 @media screen and (max-width: 48em) {
     .DashboardLayout-sidebar {
-        display: none
+        display: none;
     }
 }
 
 .DashboardLayout-main {
     display: table-cell;
     vertical-align: top;
-    z-index: 100
+    z-index: 100;
 }
 
 .has-sidebar-adz .DashboardLayout-main {
-    width: 100%
+    width: 100%;
 }
 
 .ProgressDashboardUpsellPage .DashboardLayout-main {
-    background-color: var(--gray-100-gray-900)
+    background-color: var(--gray-100-gray-900);
 }
 
 .DashboardLayout-sidebarAd {
@@ -306,12 +306,12 @@
     left: 0;
     position: absolute;
     right: 0;
-    top: 0
+    top: 0;
 }
 
 @media screen and (max-width: 64em) {
     .DashboardLayout-sidebarAd {
-        display: none
+        display: none;
     }
 }
 
@@ -321,7 +321,7 @@
     .DashboardLayout-sidebarAd .SiteAd.SiteAd--FolderSidebar,
     .DashboardLayout-sidebarAd .SiteAd.SiteAd--HomepageSidebar,
     .DashboardLayout-sidebarAd .SiteAd.SiteAd--ProfileSidebar {
-        width: 10rem
+        width: 10rem;
     }
 }
 
@@ -331,28 +331,81 @@
     .DashboardLayout-sidebarAd .SiteAd.SiteAd--FolderSidebar,
     .DashboardLayout-sidebarAd .SiteAd.SiteAd--HomepageSidebar,
     .DashboardLayout-sidebarAd .SiteAd.SiteAd--ProfileSidebar {
-        width: 18.75rem
+        width: 18.75rem;
     }
 }
 
 .DashboardPage-header.is-transparent {
-    background-color: #fff0
+    background-color: #fff0;
 }
 
 .DashboardPage-header.is-verified {
-    background-color: var(--twilight-600-gray-900)
+    background-color: var(--twilight-600-gray-900);
 }
 
 @media screen and (min-width: 64.0625em) {
     .has-sidebar-adz .DashboardPage-header {
+        padding-right: 12.5rem;
+    }
+}
+
+@media screen and (min-width: 81.3125em) {
+    .has-sidebar-adz .DashboardPage-header {
+        padding-right: 21.25rem;
+    }
+}
+
+.DashboardPage-primaryContents {
+    display: grid;
+    grid-template-columns: 100% 0;
+    height: 100%;
+    margin-bottom: 2rem;
+    min-height: 39rem;
+    position: relative
+}
+
+@media screen and (min-width: 64.0625em) {
+    .has-info-sidebar .DashboardPage-primaryContents {
+        grid-template-columns: auto 21.25rem
+    }
+
+    .has-adz .DashboardPage-primaryContents {
+        grid-template-columns: auto 12.5rem
+    }
+}
+
+@media screen and (min-width: 81.3125em) {
+    .has-adz .DashboardPage-primaryContents {
+        grid-template-columns: auto 21.25rem
+    }
+}
+
+@media screen and (min-width: 64.0625em) {
+    .DashboardPage.has-adz.has-info-sidebar .DashboardPage-primaryContents {
+        grid-template-columns: auto 21.25rem
+    }
+
+    .has-sidebar-adz .DashboardPage-primaryContents {
         padding-right: 12.5rem
     }
 }
 
 @media screen and (min-width: 81.3125em) {
-    .has-sidebar-adz .DashboardPage-header {
+    .has-sidebar-adz .DashboardPage-primaryContents {
         padding-right: 21.25rem
     }
+}
+
+div:not(.PremiumFolderPage):not(.ProgressDashboardUpsellPage)>.DashboardLayout-container:not(.has-sidebar-adz) .DashboardPage-primaryContents {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem
+}
+
+.ProgressDashboardUpsellPage .DashboardLayout-container:not(.has-sidebar-adz) .DashboardPage-primaryContents {
+    margin-left: unset;
+    margin-right: unset;
+    max-width: unset
 }
 
 .DashboardPage-inner {
@@ -361,7 +414,7 @@
     height: 100%;
     margin-bottom: 2rem;
     min-height: 39rem;
-    position: relative
+    position: relative;
 }
 
 @media screen and (min-width: 64.0625em) {
@@ -3571,22 +3624,22 @@ body.theme-night .ClassPageBanner {
     font-size: .75rem;
     font-weight: 400;
     margin-bottom: 0;
-    padding-bottom: 0
+    padding-bottom: 0;
 }
 
 .VerifiedCreatorInfo-attribute {
-    margin-right: 2.5rem
+    margin-right: 2.5rem;
 }
 
 .VerifiedCreatorInfo-attribute:last-of-type {
-    margin-right: 0
+    margin-right: 0;
 }
 
 .VerifiedCreatorInfo-attributeLabel {
     color: var(--gray-400-gray-500);
     font-size: .75rem;
     font-weight: 600;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 .VerifiedCreatorInfo-attributeValue {
@@ -3596,11 +3649,11 @@ body.theme-night .ClassPageBanner {
     line-height: 1.2;
     margin-top: .25rem;
     text-align: center;
-    text-align: left
+    text-align: left;
 }
 
 .VerifiedCreatorInfo-attributeValue .RatingDisplay-ratingStar {
-    color: #ffcd1f
+    color: #ffcd1f;
 }
 
 .TestModeHint-hint {
@@ -3610,7 +3663,7 @@ body.theme-night .ClassPageBanner {
     line-height: 1.866666666666667;
     line-height: 1.5rem;
     margin: .75rem 0 1.5rem 1.5rem;
-    padding-left: 1rem
+    padding-left: 1rem;
 }
 
 @media screen and (max-width: 38.75em) {
@@ -3618,7 +3671,7 @@ body.theme-night .ClassPageBanner {
         font-size: .875rem;
         font-weight: 400;
         line-height: 1.714285714285714;
-        margin-left: 1rem
+        margin-left: 1rem;
     }
 }
 
@@ -3627,7 +3680,7 @@ body.theme-night .ClassPageBanner {
     font-weight: 600;
     letter-spacing: .05375rem;
     line-height: 1.333333333333333;
-    margin-bottom: .625rem
+    margin-bottom: .625rem;
 }
 
 @media screen and (max-width: 38.75em) {
@@ -3635,7 +3688,7 @@ body.theme-night .ClassPageBanner {
         font-size: .625rem;
         font-weight: 600;
         letter-spacing: .0625rem;
-        line-height: 1.2
+        line-height: 1.2;
     }
 }
 
@@ -3646,7 +3699,7 @@ body.theme-night .ClassPageBanner {
     line-height: 1.866666666666667;
     line-height: 1.5rem;
     margin: .75rem 0 1.5rem 3.75rem;
-    padding-left: 1rem
+    padding-left: 1rem;
 }
 
 @media screen and (max-width: 38.75em) {
@@ -3655,11 +3708,11 @@ body.theme-night .ClassPageBanner {
         font-weight: 400;
         line-height: 1.714285714285714;
         margin-bottom: 1rem;
-        margin-left: 2rem
+        margin-left: 2rem;
     }
 
     .TestModeExplanation-explanation .FormattedText {
-        font-size: .75rem
+        font-size: .75rem;
     }
 }
 
@@ -3669,7 +3722,7 @@ body.theme-night .ClassPageBanner {
     font-weight: 600;
     letter-spacing: .05375rem;
     line-height: 1.333333333333333;
-    margin-bottom: .625rem
+    margin-bottom: .625rem;
 }
 
 @media screen and (max-width: 38.75em) {
@@ -3678,68 +3731,68 @@ body.theme-night .ClassPageBanner {
         font-size: .75rem;
         font-weight: 600;
         letter-spacing: .0625rem;
-        line-height: 1.2
+        line-height: 1.2;
     }
 }
 
 .TestModeMultipleChoiceQuestion {
     margin-bottom: 25px;
-    page-break-inside: avoid
+    page-break-inside: avoid;
 }
 
 .TestModeMultipleChoiceQuestion-prompt {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.625;
-    margin-bottom: 10px
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 38.75em) {
     .TestModeMultipleChoiceQuestion-prompt {
         font-size: .875rem;
         font-weight: 400;
-        line-height: 1.571428571428571
+        line-height: 1.571428571428571;
     }
 }
 
 .TestModeMultipleChoiceQuestion-choicesList {
     list-style-type: none;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
 }
 
 @media print {
     .TestModeMultipleChoiceQuestion-choicesList {
-        list-style-type: upper-alpha
+        list-style-type: upper-alpha;
     }
 }
 
 .TestModeMultipleChoiceQuestion-choice {
-    margin-top: .625rem
+    margin-top: .625rem;
 }
 
 @media print {
     .TestModeMultipleChoiceQuestion-choice {
-        margin-left: .75rem
+        margin-left: .75rem;
     }
 
     .TestModeMultipleChoiceQuestion-choice .UIRadio {
         display: inline-block;
-        width: auto
+        width: auto;
     }
 
     .TestModeMultipleChoiceQuestion-choice .UIRadio-fauxInput,
     .TestModeMultipleChoiceQuestion-choice .UIRadio-input {
-        display: none
+        display: none;
     }
 
     .TestModeMultipleChoiceQuestion-choice .UIRadio-label {
         display: inline;
-        margin-left: 0
+        margin-left: 0;
     }
 }
 
 .TestModeMultipleChoiceQuestion-choiceText {
-    display: flex
+    display: flex;
 }
 
 .is-correct .TestModeMultipleChoiceQuestion-choiceText .UICheckbox[aria-disabled=true] .UICheckbox-label,
@@ -3747,26 +3800,26 @@ body.theme-night .ClassPageBanner {
 .is-incorrect .TestModeMultipleChoiceQuestion-choiceText .UICheckbox[aria-disabled=true] .UICheckbox-label,
 .is-incorrect .TestModeMultipleChoiceQuestion-choiceText .UIRadio[aria-disabled=true] .UIRadio-label {
     color: var(--gray-700-gray-200);
-    cursor: text
+    cursor: text;
 }
 
 .TestModeMultipleChoiceQuestion-choiceRadio {
-    margin-right: 5px
+    margin-right: 5px;
 }
 
 @media print {
     .TestModeMultipleChoiceQuestion-choiceRadio {
-        display: none
+        display: none;
     }
 }
 
 .TestModeMultipleChoiceQuestion-noAnswerGiven {
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
 }
 
 @media screen and (max-width: 38.75em) {
     .TestModeMultipleChoiceQuestion-noAnswerGiven {
-        margin-bottom: 1.5rem
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -3775,21 +3828,21 @@ body.theme-night .ClassPageBanner {
     margin-right: .625rem;
     text-align: center;
     vertical-align: text-top;
-    width: 1.25rem
+    width: 1.25rem;
 }
 
 .is-correct .TestModeMultipleChoiceQuestion-gradedAnswerIcon {
-    color: #23b26d
+    color: #23b26d;
 }
 
 .is-incorrect .TestModeMultipleChoiceQuestion-gradedAnswerIcon {
-    color: #ff725b
+    color: #ff725b;
 }
 
 @media screen and (max-width: 38.75em) {
     .TestModeMultipleChoiceQuestion-gradedAnswerIcon {
         margin-right: .625rem;
-        width: 1.5rem
+        width: 1.5rem;
     }
 }
 
@@ -3799,7 +3852,7 @@ body.theme-night .ClassPageBanner {
     font-weight: 600;
     letter-spacing: .05375rem;
     line-height: 1.333333333333333;
-    margin: 1.5rem 0 .5rem
+    margin: 1.5rem 0 .5rem;
 }
 
 @media screen and (max-width: 38.75em) {
@@ -3807,62 +3860,62 @@ body.theme-night .ClassPageBanner {
         font-size: .625rem;
         font-weight: 600;
         letter-spacing: .0625rem;
-        line-height: 1.2
+        line-height: 1.2;
     }
 }
 
 .TestModeMultipleChoiceQuestion-diagramContainer {
     height: 18.125rem;
-    width: 23.75rem
+    width: 23.75rem;
 }
 
 @media screen and (max-width: 38.75em) {
     .TestModeMultipleChoiceQuestion-diagramContainer {
         height: 16.875rem;
-        width: 100%
+        width: 100%;
     }
 }
 
 .TestModeMultipleChoiceQuestion-diagramLocationPreviewContainer {
     height: 6.25rem;
     margin: 0 2.5rem 1.25rem;
-    width: 6.25rem
+    width: 6.25rem;
 }
 
 .TestModeMultipleChoiceQuestion-hint {
-    margin: .25rem 0 1rem
+    margin: .25rem 0 1rem;
 }
 
 .TestModeMultipleChoiceQuestion-selectMultipleHeading {
     color: var(--gray-500-gray-400);
-    margin: .75rem 0
+    margin: .75rem 0;
 }
 
 .TestModeMultipleChoiceQuestion-showVideoLink {
     margin-bottom: 1rem;
     margin-left: 5rem;
-    margin-top: 1rem
+    margin-top: 1rem;
 }
 
 .TestModeMultipleChoiceQuestion-showVideoLink .UILink {
     align-items: center;
-    display: flex
+    display: flex;
 }
 
 .TestModeMultipleChoiceQuestion-showVideoLink .UIIcon {
     margin-right: .75rem;
-    margin-top: .25rem
+    margin-top: .25rem;
 }
 
 @media screen and (max-width: 48em) {
     .TestModeMultipleChoiceQuestion-showVideoLink {
         margin-bottom: 1.25rem;
-        margin-left: 2.5rem
+        margin-left: 2.5rem;
     }
 }
 
 .ExpandableText-showMoreLink {
-    margin: 0 .625rem
+    margin: 0 .625rem;
 }
 
 .PurchasableContentProductTypeTag {
@@ -3874,7 +3927,7 @@ body.theme-night .ClassPageBanner {
     letter-spacing: .0625rem;
     line-height: 1.333333333333333;
     margin: 0 1rem;
-    padding: .25rem .75rem
+    padding: .25rem .75rem;
 }
 
 @media screen and (max-width: 38.75em) {
@@ -3883,35 +3936,35 @@ body.theme-night .ClassPageBanner {
         font-size: .625rem;
         font-weight: 600;
         letter-spacing: .0625rem;
-        line-height: 1.3
+        line-height: 1.3;
     }
 }
 
 .PurchasableContentProductTypeTag.PurchasableContentProductTypeTag--merch {
     background-color: #ffcd1f;
-    color: #303545
+    color: #303545;
 }
 
 @media screen and (max-width: 38.75em) {
     .PurchasableContentProductTypeTag.PurchasableContentProductTypeTag--merch {
         display: unset;
         margin: 0 .75rem;
-        padding: .25rem
+        padding: .25rem;
     }
 }
 
 .PurchasableContentProductTypeTag.PurchasableContentProductTypeTag--inline {
     margin: 0;
-    vertical-align: initial
+    vertical-align: initial;
 }
 
 .ZoomableImage,
 .ZoomableImage-imageWrap {
-    display: inline-block
+    display: inline-block;
 }
 
 .ZoomableImage-rawImage {
-    vertical-align: middle
+    vertical-align: middle;
 }
 
 .ZoomableImage-image {
@@ -3919,14 +3972,14 @@ body.theme-night .ClassPageBanner {
     cursor: -webkit-zoom-out;
     cursor: -moz-zoom-out;
     cursor: -ms-zoom-out;
-    cursor: zoom-out
+    cursor: zoom-out;
 }
 
 .ZoomableImage-image,
 .ZoomableImage-overlay {
     position: fixed;
     transition: all .25s ease;
-    z-index: 10001
+    z-index: 10001;
 }
 
 .ZoomableImage-overlay {
@@ -3936,7 +3989,7 @@ body.theme-night .ClassPageBanner {
     left: 0;
     opacity: 0;
     top: 0;
-    width: 100%
+    width: 100%;
 }
 
 .MediaImage {
@@ -3946,7 +3999,7 @@ body.theme-night .ClassPageBanner {
 .MediaImage-baseImage {
     cursor: zoom-in;
     max-height: 240px;
-    max-width: 240px
+    max-width: 240px;
 }
 
 .MediaVideo-player {

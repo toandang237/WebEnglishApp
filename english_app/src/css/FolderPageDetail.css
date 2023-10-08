@@ -104,7 +104,7 @@
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        gap: 1rem
+        gap: 1rem;
     }
 
     .s12vkslz.s1m1ja62 button {
@@ -120,17 +120,17 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex
+    display: flex !important;
 }
 
 .FolderPageHeader-byline {
-    color: var(--gray-600-gray-100)
+    color: var(--gray-600-gray-100) !important;
 }
 
 .FolderPageHeader-userLink {
-    margin-left: .5rem
+    margin-left: .5rem;
 }
 
 .k-icon-customize {
-    font-size: 35px !important;
+    font-size: 21px !important;
 }

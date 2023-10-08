@@ -38,6 +38,8 @@ export let endpoints = {
   updateLesson: (lesson_id) => `/lessons/${lesson_id}/`, // Cập nhật master lesson
   getLessonsJoined: "/users/get-lessons-joined/", // Lấy danh sách khóa học đã tham gia
   createLesson: "/lessons/",
+  getLessonsByCourse: (course_id) =>
+    `/courses/${course_id}/get-lessons-by-course/`, //API lấy danh sách bài học theo course
 
   //-----------------
 
@@ -53,4 +55,6 @@ export let endpoints = {
  * Khởi tạo axios lấy đường dẫn để sủ dụng API
  */
 export default axios.create({
+  baseURL: "https://dangviettoan181101.pythonanywhere.com/", //"http://127.0.0.1:8000/"
+  // baseURL: "http://127.0.0.1:8000/",
 });

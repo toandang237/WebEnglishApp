@@ -12,7 +12,7 @@ import DashBoardListItemCourse from "../../DashBoardItems/DashBoardListItemCours
 import DialogNewFolder from "../../Dialog/DialogNewFolder";
 import { TurnOnNewFolder } from "../../../Creators/CommonCreator";
 
-export default function FoldersTab() {
+export default function FoldersTab(props) {
   const items = [
     {
       action: () => {
@@ -61,11 +61,17 @@ export default function FoldersTab() {
     const loadCourse = async () => {
       try {
         if (chooseIdx.idx === 1) {
-          res = await Apis.get(endpoints["getAllCoursesOfUser"], {
-            headers: {
-              Authorization: `Bearer ${accessToken}`,
+          res = await Apis.post(
+            endpoints["getAllCoursesOfUser"],
+            {
+              user_id: props.user?.id,
             },
-          });
+            {
+              headers: {
+                Authorization: `Bearer ${accessToken}`,
+              },
+            }
+          );
         } else if (chooseIdx.idx === 2) {
           res = await Apis.get(endpoints["getCoursesJoined"], {
             headers: {
@@ -108,7 +114,7 @@ export default function FoldersTab() {
                   className="AssemblyButtonBase AssemblySecondaryButton AssemblyButtonBase--medium AssemblyButtonBase--padding"
                   onClick={onClick}
                 >
-                  <span>Recent</span>
+                  <span>{chooseIdx.displayName}</span>
                   <span className="k-icon k-i-chevron-down AssemblyIcon AssemblyIcon--medium"></span>
                 </button>
                 {show && <DropDownList show={show} items={items} />}

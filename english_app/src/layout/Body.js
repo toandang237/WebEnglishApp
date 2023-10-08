@@ -61,7 +61,7 @@ export default function Body() {
         {user !== null && user !== undefined ? (
           <Routes>
             <Route path="/" element={<HomeMain />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile/:username/:user_id/" element={<Profile />} />
             <Route
               path="/:lesson_id/lesson-detail"
               element={<LessonDetail />}

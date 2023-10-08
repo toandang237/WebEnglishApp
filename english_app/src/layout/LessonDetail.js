@@ -9,7 +9,7 @@ import WordItem from "../Components/TermRow/WordItem";
 import getMessage from "../js/MessageError";
 import { useEffect } from "react";
 import Apis, { endpoints } from "../config/Apis";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import cookies from "react-cookies";
 import dispatch, { useDispatch, useSelector } from "react-redux";
 import { TurnOnDialog } from "../Creators/DialogCreator";
@@ -46,6 +46,7 @@ export default function LessonDetail() {
   const [saveSuccess, setSaveSuccess] = useState(false);
   const isSave = useSelector((state) => state.checkSaveLesson);
   const [isShowImage, setIsShowImage] = useState({ isShow: false, image: "" });
+  const listDeleteRef = useRef([]);
 
   useEffect(() => {
     document.title = getMessage("T0001", false);
@@ -81,11 +82,14 @@ export default function LessonDetail() {
     }
     if (ref == 0) {
       let listWords = words;
+      var item = listWords[idxDelete - 1];
       if (idxDelete != -1) {
         listWords.splice(idxDelete - 1, 1);
       }
       setWords(listWords);
       setRef(-1);
+      pushDeleteItemIntoList(item);
+      console.log(listDeleteRef.current);
     }
   }, [ref]);
 
@@ -218,6 +222,12 @@ export default function LessonDetail() {
 
   function showImage(data) {
     setIsShowImage(data);
+  }
+
+  function pushDeleteItemIntoList(item) {
+    var data = listDeleteRef.current;
+    data.push(item);
+    listDeleteRef.current = data;
   }
 
   return (

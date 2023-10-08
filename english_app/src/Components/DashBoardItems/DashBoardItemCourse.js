@@ -1,5 +1,7 @@
 /** @format */
 
+import { Link } from "react-router-dom";
+
 export default function DashBoardItemCourse(props) {
   const item = props.item;
   return (
@@ -27,12 +29,12 @@ export default function DashBoardItemCourse(props) {
             </div>
           </div>
           <div className="UILinkBox-link">
-            <a
+            <Link
               aria-label="sd"
               className="UILink"
               data-testid="UILink-anchor"
-              href={`/folders/${item.id}/sets/`}
-            ></a>
+              to={`/folders/${item.id}/sets/`}
+            />
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import { useState } from "react";
 import Apis, { endpoints } from "../../config/Apis";
 import { ExceptCommon } from "../../js/ExceptCommon";
 import cookies from "react-cookies";
+import { Link } from "react-router-dom";
 
 export default function DashBoardItem(props) {
   const item = props.item;
@@ -51,7 +52,7 @@ export default function DashBoardItem(props) {
             </div>
           </div>
           <div className="UILinkBox-link">
-            <a className="UILink" href={`/${item.id}/lesson-detail`}></a>
+            <Link className="UILink" to={`/${item.id}/lesson-detail`} />
           </div>
         </div>
       </div>
